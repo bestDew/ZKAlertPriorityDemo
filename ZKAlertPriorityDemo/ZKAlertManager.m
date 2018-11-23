@@ -57,6 +57,10 @@
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (strongSelf.handler) strongSelf.handler(YES);
+        /**
+         此Demo仅提供一种思路😂
+         自定义弹窗可以下代码放在弹窗消失动画的完成回调里
+         */
         if (strongSelf.didDismiss) strongSelf.didDismiss();
     }];
     [_alertController addAction:cancelAction];
