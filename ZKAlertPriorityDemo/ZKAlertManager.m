@@ -137,11 +137,11 @@ static ZKAlertManager *_manager = nil;
     [_alertQueue addObject:alert];
 }
 
-- (void)addAlerts:(NSArray<ZKAlert *> *)alerts
+- (void)addAlerts:(NSSet<ZKAlert *> *)alerts
 {
     if (_manager == nil || alerts == nil) return;
     
-    [_alertQueue addObjectsFromArray:alerts];
+    [_alertQueue addObjectsFromArray:alerts.allObjects];
 }
 
 - (void)showAlerts

@@ -51,7 +51,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 向队列中添加弹窗 */
 - (void)addAlert:(ZKAlert *)alert;
-- (void)addAlerts:(NSArray<ZKAlert *> *)alerts;
+- (void)addAlerts:(NSSet<ZKAlert *> *)alerts;
 
 /** 按优先级依次显示弹窗 */
 - (void)showAlerts;
